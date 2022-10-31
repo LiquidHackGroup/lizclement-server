@@ -3,6 +3,7 @@ import express from 'express';
 import {
 	getUsers,
 	adminSignup,
+	customerSignup,
 	updateUserInfo,
 	signin,
 	changePassword,
@@ -17,6 +18,7 @@ router.get('/profile', auth, profile);
 router.get('/customers', auth, getUsers);
 router.post('/signin', signin);
 router.post('/admin/signup', adminSignup);
+router.post('/customer/signup', customerSignup);
 router.put('/profile', auth, updateUserInfo);
 router.put('/update-password', auth, changePassword);
 router.put('/forgot-password', forgotPassword);
